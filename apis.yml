@@ -1,0 +1,98 @@
+aid: quickbooks
+name: QuickBooks
+description: >-
+  QuickBooks is Intuit's accounting software platform for small businesses,
+  self-employed, and accountants, available as QuickBooks Online (cloud) and
+  QuickBooks Desktop. The QuickBooks Online Accounting REST API provides
+  programmatic access to a company's financial data, allowing developers to
+  read, create, update, and delete accounting objects including invoices,
+  customers, payments, bills, vendors, items, and tax data using OAuth 2.0
+  and JSON over HTTPS.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Accounting
+  - Bookkeeping
+  - Small Business
+  - Financials
+  - Invoicing
+  - Payroll
+  - Tax
+url: https://raw.githubusercontent.com/api-evangelist/quickbooks/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: quickbooks:online-accounting
+    name: QuickBooks Online Accounting API
+    description: >-
+      REST API for the QuickBooks Online accounting platform, exposing
+      accounting objects such as Invoice, Customer, Payment, Bill, Vendor,
+      Account, Item, Estimate, JournalEntry, and TaxRate over JSON with
+      OAuth 2.0 authentication.
+    humanURL: https://developer.intuit.com/app/developer/qbo/docs/develop
+    baseURL: https://quickbooks.api.intuit.com/v3/company
+    tags:
+      - Accounting
+      - Invoices
+      - Customers
+      - Payments
+      - OAuth 2.0
+    properties:
+      - type: Documentation
+        url: https://developer.intuit.com/app/developer/qbo/docs/develop
+      - type: API Reference
+        url: https://developer.intuit.com/app/developer/qbo/docs/api/accounting/most-commonly-used/account
+      - type: Getting Started
+        url: https://developer.intuit.com/app/developer/qbo/docs/get-started
+      - type: Authentication
+        url: https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0
+  - aid: quickbooks:payments
+    name: QuickBooks Payments API
+    description: >-
+      REST API for processing credit card, ACH, and eCheck payments through
+      Intuit's payments platform, with support for charges, refunds, tokens,
+      and payment methods.
+    humanURL: https://developer.intuit.com/app/developer/qbpayments/docs/develop
+    baseURL: https://api.intuit.com/quickbooks/v4/payments
+    tags:
+      - Payments
+      - Credit Cards
+      - ACH
+    properties:
+      - type: Documentation
+        url: https://developer.intuit.com/app/developer/qbpayments/docs/develop
+      - type: API Reference
+        url: https://developer.intuit.com/app/developer/qbpayments/docs/api/resources/all-entities/charges
+  - aid: quickbooks:payroll
+    name: QuickBooks Payroll API
+    description: >-
+      REST API for managing payroll, employees, paychecks, and payroll
+      tax information within QuickBooks Online Payroll.
+    humanURL: https://developer.intuit.com/app/developer/qbpayrollapi/docs/develop
+    baseURL: https://qb.sbfinservices.intuit.com
+    tags:
+      - Payroll
+      - Employees
+      - Tax
+    properties:
+      - type: Documentation
+        url: https://developer.intuit.com/app/developer/qbpayrollapi/docs/develop
+common:
+  - type: Website
+    url: https://quickbooks.intuit.com/
+  - type: Developer Portal
+    url: https://developer.intuit.com/
+  - type: Documentation
+    url: https://developer.intuit.com/app/developer/qbo/docs/develop
+  - type: API Reference
+    url: https://developer.intuit.com/app/developer/qbo/docs/api/accounting/most-commonly-used/account
+  - type: Sign Up
+    url: https://developer.intuit.com/app/developer/homepage
+  - type: Pricing
+    url: https://quickbooks.intuit.com/pricing/
+  - type: GitHub Organization
+    url: https://github.com/intuit
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
