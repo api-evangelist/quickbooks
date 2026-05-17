@@ -41,9 +41,9 @@ apis:
     properties:
       - type: Documentation
         url: https://developer.intuit.com/app/developer/qbo/docs/develop
-      - type: API Reference
+      - type: APIReference
         url: https://developer.intuit.com/app/developer/qbo/docs/api/accounting/most-commonly-used/account
-      - type: Getting Started
+      - type: GettingStarted
         url: https://developer.intuit.com/app/developer/qbo/docs/get-started
       - type: Authentication
         url: https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0
@@ -62,7 +62,7 @@ apis:
     properties:
       - type: Documentation
         url: https://developer.intuit.com/app/developer/qbpayments/docs/develop
-      - type: API Reference
+      - type: APIReference
         url: https://developer.intuit.com/app/developer/qbpayments/docs/api/resources/all-entities/charges
   - aid: quickbooks:payroll
     name: QuickBooks Payroll API
@@ -85,13 +85,13 @@ common:
     url: https://developer.intuit.com/
   - type: Documentation
     url: https://developer.intuit.com/app/developer/qbo/docs/develop
-  - type: API Reference
+  - type: APIReference
     url: https://developer.intuit.com/app/developer/qbo/docs/api/accounting/most-commonly-used/account
-  - type: Sign Up
+  - type: SignUp
     url: https://developer.intuit.com/app/developer/homepage
   - type: Pricing
     url: https://quickbooks.intuit.com/pricing/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/intuit
 maintainers:
   - FN: Kin Lane
