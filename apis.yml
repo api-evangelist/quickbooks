@@ -79,6 +79,8 @@ apis:
       - type: Documentation
         url: https://developer.intuit.com/app/developer/qbpayrollapi/docs/develop
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/showcase/quickbooks
   - type: Website
     url: https://quickbooks.intuit.com/
   - type: Developer Portal
