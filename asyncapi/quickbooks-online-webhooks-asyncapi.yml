@@ -1,0 +1,308 @@
+asyncapi: '2.6.0'
+info:
+  title: QuickBooks Online Webhooks
+  version: '1.0.0'
+  description: |
+    AsyncAPI 2.6 description of the QuickBooks Online (QBO) Data Services
+    webhook surface. QuickBooks Online delivers asynchronous notifications
+    of data-change events on the configured Intuit App by issuing an HTTPS
+    POST with a JSON body to the webhook endpoint URL the developer
+    registers in the Intuit Developer dashboard.
+
+    Subscribers select the QBO entities they want to be notified about
+    (per Intuit App, applied across every connected company / `realmId`)
+    and the operations of interest (Create, Update, Delete, Merge, Void).
+    QuickBooks Online batches every change that occurs within a short
+    aggregation window into a single notification. One notification can
+    therefore carry multiple `eventNotifications`, each scoped to a single
+    `realmId`, with a `dataChangeEvent.entities` array describing every
+    affected entity.
+
+    Each delivery includes an `intuit-signature` HTTP header containing
+    the base64-encoded HMAC-SHA256 of the raw request body, computed with
+    the per-app Verifier Token shown in the Intuit Developer dashboard.
+    Subscribers must recompute the HMAC over the unmodified request body
+    and reject any request whose signature does not match.
+
+    Notifications carry only entity identifiers (`name`, `id`, `operation`,
+    `lastUpdated`). To obtain the full record the subscriber must call the
+    QuickBooks Online Accounting REST API for the indicated `realmId`.
+
+    NOTE: Intuit is migrating QuickBooks Online webhooks to a CloudEvents
+    payload format; this document models the legacy
+    `eventNotifications` / `dataChangeEvent` envelope that the QBO Data
+    Services webhook documentation describes. Fields not documented by
+    Intuit are not invented here.
+
+    Source documentation:
+      - Webhooks overview:
+        https://developer.intuit.com/app/developer/qbo/docs/develop/webhooks
+      - Webhooks help article:
+        https://help.developer.intuit.com/s/article/Webhooks-for-QuickBooks-Online-REST-APIs
+      - CloudEvents migration announcement:
+        https://medium.com/intuitdev/upcoming-change-to-webhooks-payload-structure-2a87dab642d0
+  contact:
+    name: Intuit Developer
+    url: https://developer.intuit.com/app/developer/qbo/docs/develop/webhooks
+  license:
+    name: Intuit Developer Terms of Service
+    url: https://developer.intuit.com/app/developer/qbo/docs/get-started/terms-of-service
+  tags:
+    - name: QuickBooks
+    - name: QuickBooks Online
+    - name: Webhooks
+    - name: Accounting
+    - name: Data Services
+
+defaultContentType: application/json
+
+servers:
+  subscriber:
+    url: '{webhookEndpointUrl}'
+    protocol: https
+    description: |
+      Developer-controlled HTTPS endpoint registered in the Intuit
+      Developer dashboard for the Intuit App. QuickBooks Online sends
+      every selected data-change notification, for every connected
+      company (`realmId`), to this single URL via HTTP POST.
+    variables:
+      webhookEndpointUrl:
+        description: Fully-qualified HTTPS URL of the subscriber endpoint.
+        default: https://example.com/quickbooks/webhook
+
+channels:
+  /quickbooks/webhook:
+    description: |
+      Single subscriber endpoint that receives every QuickBooks Online
+      Data Services webhook notification for the Intuit App. The body is
+      a JSON envelope with an `eventNotifications` array; each element is
+      scoped to a single QuickBooks Online company by `realmId` and lists
+      every affected entity in `dataChangeEvent.entities`. Subscribers
+      should respond with a 2xx status code; non-2xx responses cause
+      Intuit to retry the delivery.
+    bindings:
+      http:
+        type: request
+        method: POST
+        bindingVersion: '0.3.0'
+    publish:
+      operationId: receiveQuickBooksOnlineWebhook
+      summary: Receive a QuickBooks Online webhook notification
+      description: |
+        QuickBooks Online POSTs a JSON `WebhookNotification` envelope to
+        the subscriber endpoint. The payload contains one or more
+        `EventNotification` entries; each entry carries a `realmId` and a
+        `DataChangeEvent` whose `entities` array lists every affected
+        QBO entity with its `name`, `id`, `operation`, and `lastUpdated`
+        timestamp. The HTTP request also carries an `intuit-signature`
+        header which subscribers must validate against the body using
+        HMAC-SHA256 and the App's Verifier Token before processing.
+      message:
+        $ref: '#/components/messages/QuickBooksOnlineWebhookNotification'
+
+components:
+  messages:
+    QuickBooksOnlineWebhookNotification:
+      name: QuickBooksOnlineWebhookNotification
+      title: QuickBooks Online Webhook Notification
+      summary: Batched data-change events for one or more QuickBooks Online companies.
+      contentType: application/json
+      headers:
+        $ref: '#/components/schemas/WebhookHeaders'
+      payload:
+        $ref: '#/components/schemas/WebhookNotification'
+      bindings:
+        http:
+          bindingVersion: '0.3.0'
+
+  schemas:
+    WebhookHeaders:
+      type: object
+      description: |
+        HTTP headers QuickBooks Online sets on every webhook delivery.
+        Only the headers that are load-bearing for verification are
+        modelled here.
+      properties:
+        intuit-signature:
+          type: string
+          description: |
+            Base64-encoded HMAC-SHA256 of the raw request body, computed
+            with the per-app Verifier Token configured in the Intuit
+            Developer dashboard. Subscribers MUST recompute the HMAC over
+            the unmodified body bytes and compare with this header using
+            a constant-time comparison.
+          example: g0BVdNNqUdvQjOu4QrR4nP0PYnY=
+        Content-Type:
+          type: string
+          description: Always `application/json` for QuickBooks Online webhooks.
+          const: application/json
+      required:
+        - intuit-signature
+        - Content-Type
+
+    WebhookNotification:
+      type: object
+      description: |
+        Top-level webhook envelope. A single delivery can carry events
+        for multiple QuickBooks Online companies; each
+        `EventNotification` is scoped to one `realmId`.
+      properties:
+        eventNotifications:
+          type: array
+          description: One entry per affected QuickBooks Online company.
+          minItems: 1
+          items:
+            $ref: '#/components/schemas/EventNotification'
+      required:
+        - eventNotifications
+      example:
+        eventNotifications:
+          - realmId: '1185883450'
+            dataChangeEvent:
+              entities:
+                - name: Customer
+                  id: '1'
+                  operation: Create
+                  lastUpdated: '2026-05-30T15:00:00-0700'
+                - name: Invoice
+                  id: '129'
+                  operation: Update
+                  lastUpdated: '2026-05-30T15:00:00-0700'
+
+    EventNotification:
+      type: object
+      description: |
+        Data-change events that occurred within the aggregation window
+        for a single QuickBooks Online company (`realmId`).
+      properties:
+        realmId:
+          type: string
+          description: |
+            Identifier of the QuickBooks Online company whose data
+            changed. Subscribers use `realmId` to look up the OAuth 2.0
+            access token to call back into the Accounting REST API.
+          example: '1185883450'
+        dataChangeEvent:
+          $ref: '#/components/schemas/DataChangeEvent'
+      required:
+        - realmId
+        - dataChangeEvent
+
+    DataChangeEvent:
+      type: object
+      description: Wrapper around the list of affected entities.
+      properties:
+        entities:
+          type: array
+          description: |
+            Every QBO entity affected by data-change operations within
+            the aggregation window for this `realmId`.
+          minItems: 1
+          items:
+            $ref: '#/components/schemas/Entity'
+      required:
+        - entities
+
+    Entity:
+      type: object
+      description: |
+        A single QuickBooks Online entity affected by a Create, Update,
+        Delete, Merge, or Void operation. The full record is not
+        included; subscribers fetch it from the QBO Accounting REST API
+        keyed by `realmId` and `id`.
+      properties:
+        name:
+          $ref: '#/components/schemas/EntityName'
+        id:
+          type: string
+          description: |
+            Identifier of the affected entity within the QuickBooks
+            Online company. For Merge events, the surviving entity's id.
+          example: '129'
+        operation:
+          $ref: '#/components/schemas/Operation'
+        lastUpdated:
+          type: string
+          description: |
+            Timestamp of the most recent change to this entity within
+            the aggregation window. ISO 8601 with timezone offset.
+          example: '2026-05-30T15:00:00-0700'
+        deletedId:
+          type: string
+          description: |
+            Set only on Merge events; identifier of the entity that was
+            merged into (and replaced by) the entity identified by `id`.
+          example: '57'
+      required:
+        - name
+        - id
+        - operation
+        - lastUpdated
+
+    EntityName:
+      type: string
+      description: |
+        QuickBooks Online entity type whose record changed. The set
+        below lists the entities documented as supported by QuickBooks
+        Online Data Services webhooks.
+      enum:
+        - Account
+        - Bill
+        - BillPayment
+        - Budget
+        - Class
+        - CompanyCurrency
+        - CreditMemo
+        - Currency
+        - Customer
+        - Department
+        - Deposit
+        - Employee
+        - Estimate
+        - Invoice
+        - Item
+        - JournalCode
+        - JournalEntry
+        - Payment
+        - PaymentMethod
+        - Preferences
+        - Purchase
+        - PurchaseOrder
+        - RefundReceipt
+        - SalesReceipt
+        - TaxAgency
+        - Term
+        - TimeActivity
+        - Transfer
+        - Vendor
+        - VendorCredit
+      example: Invoice
+
+    Operation:
+      type: string
+      description: |
+        The kind of change that occurred to the entity. Not every
+        operation is valid for every entity; consult the Intuit
+        Developer webhooks documentation for the per-entity matrix.
+
+        - Create: a new entity record was created.
+        - Update: an existing entity record was modified.
+        - Delete: the entity was deleted (for entities that support
+          delete).
+        - Merge: two entity records were merged; `id` identifies the
+          surviving record and `deletedId` identifies the record that
+          was merged away (applies to name-list entities such as
+          Customer, Vendor, Employee, Account, Item, Class,
+          Department, PaymentMethod, Term, TaxAgency).
+        - Void: the transaction was voided rather than deleted
+          (applies to transaction entities such as Invoice, Payment,
+          SalesReceipt, RefundReceipt, Bill, BillPayment, Purchase,
+          PurchaseOrder, JournalEntry, CreditMemo, Estimate,
+          VendorCredit).
+      enum:
+        - Create
+        - Update
+        - Delete
+        - Merge
+        - Void
+      example: Update

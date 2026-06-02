@@ -20,7 +20,7 @@ tags:
   - Tax
 url: https://raw.githubusercontent.com/api-evangelist/quickbooks/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-19'
+modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
   - aid: quickbooks:online-accounting
@@ -47,6 +47,8 @@ apis:
         url: https://developer.intuit.com/app/developer/qbo/docs/get-started
       - type: Authentication
         url: https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0
+      - type: AsyncAPI
+        url: asyncapi/quickbooks-online-webhooks-asyncapi.yml
   - aid: quickbooks:payments
     name: QuickBooks Payments API
     description: >-
