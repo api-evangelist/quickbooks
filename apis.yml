@@ -9,7 +9,7 @@ description: >-
   customers, payments, bills, vendors, items, and tax data using OAuth 2.0
   and JSON over HTTPS.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Accounting
   - Bookkeeping
