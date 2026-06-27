@@ -85,13 +85,13 @@ common:
     url: https://www.linkedin.com/showcase/quickbooks
   - type: Website
     url: https://quickbooks.intuit.com/
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://developer.intuit.com/
   - type: Documentation
     url: https://developer.intuit.com/app/developer/qbo/docs/develop
   - type: APIReference
     url: https://developer.intuit.com/app/developer/qbo/docs/api/accounting/most-commonly-used/account
-  - type: SignUp
+  - type: Signup
     url: https://developer.intuit.com/app/developer/homepage
   - type: Pricing
     url: https://quickbooks.intuit.com/pricing/
