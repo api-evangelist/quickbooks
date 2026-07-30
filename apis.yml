@@ -9,7 +9,18 @@ description: >-
   customers, payments, bills, vendors, items, and tax data using OAuth 2.0
   and JSON over HTTPS.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/quickbooks.png
 tags:
   - Accounting
   - Bookkeeping
