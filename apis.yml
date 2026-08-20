@@ -48,6 +48,12 @@ apis:
       - Invoices
       - Customers
       - Payments
+      - Authentication
+    tags_raw:
+      - Accounting
+      - Invoices
+      - Customers
+      - Payments
       - OAuth 2.0
     properties:
       - type: Documentation
