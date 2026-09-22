@@ -116,6 +116,37 @@ apis:
     properties:
       - type: Documentation
         url: https://developer.intuit.com/app/developer/qbpayrollapi/docs/develop
+  - aid: quickbooks:accounting-api
+    name: QuickBooks
+    description: REST API for managing QuickBooks Online accounting entities including Customer, Vendor,
+      Employee, Item, Invoice, Bill, Payment, BillPayment, JournalEntry, Account, TaxCode, and Company information.
+      All requests are scoped to a company realm and authenticated with an OAuth 2.0 bearer access token
+      issued by the Intuit Developer authorization server.
+    humanURL: https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/account
+    baseURL: https://quickbooks.api.intuit.com/v3/company/{realmId}
+    tags:
+    - Accounting
+    - Invoicing
+    - Bookkeeping
+    - REST API
+    - Authentication
+    tags_raw:
+    - Accounting
+    - Invoicing
+    - Bookkeeping
+    - REST API
+    - OAuth 2.0
+    properties:
+    - type: Documentation
+      url: https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/account
+    - type: GettingStarted
+      url: https://developer.intuit.com/app/developer/qbo/docs/get-started
+    - type: Authentication
+      url: https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0
+    - type: Sandbox
+      url: https://sandbox-quickbooks.api.intuit.com/v3/company/{realmId}
+    - type: API Explorer
+      url: https://developer.intuit.com/app/developer/qbo/docs/api/accounting/most-commonly-used/account
 common:
   - type: DomainSecurity
     url: security/quickbooks-domain-security.yml
