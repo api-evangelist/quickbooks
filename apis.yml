@@ -36,7 +36,7 @@ tags:
   - Accounting
   - Bookkeeping
   - Small Business
-  - Financial
+  - Finance
   - Invoicing
   - Payroll
   - Tax
@@ -48,6 +48,7 @@ tags_raw:
   - Invoicing
   - Payroll
   - Tax
+  - Financial
 url: https://raw.githubusercontent.com/api-evangelist/quickbooks/refs/heads/main/apis.yml
 created: '2026-05-11'
 modified: '2026-05-30'
@@ -172,3 +173,4 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-parent: intuit
