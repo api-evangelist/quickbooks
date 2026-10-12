@@ -7,6 +7,7 @@ checked:
 - https://composio.dev/toolkits/quickbooks
 - https://monid.ai/tools/quickbooks
 - https://n8n.io/integrations/quickbooks/
+- https://quickbooks.intuit.com/app/apps/
 - https://zapier.com/apps/quickbooks/integrations
 summary: null
 marketplace_apps:
@@ -286,6 +287,18 @@ marketplace_apps:
   - key: QUICKBOOKS_UPDATE_TRANSFER
   - key: QUICKBOOKS_VENDOR_BALANCE_DETAIL
   - key: QUICKBOOKS_VENDOR_BALANCE_REPORT
+- marketplace: own
+  channel: partner-built
+  app: quickbooks
+  url: https://quickbooks.intuit.com/app/apps/
+  app_count: null
+  adapter: sweep-accounting-stores.py:store_quickbooks
+  listed: 0
+  platform_built: 0
+  partner_built: 0
+  order: null
+  status: 'not-machine-readable (HTTP 0: quickbooks.intuit.com drops non-browser clients at the edge, robots.txt
+    included)'
 edges:
 - partner_name: HubSpot
   partner: hubspot
