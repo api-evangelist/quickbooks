@@ -59,7 +59,6 @@
   arazzo: null
 - slug: quickbooks-monday-com
   label: monday.com
-  partner: monday-com
   partner_name: monday.com
   category: Project Management
   type: marketplace
@@ -203,7 +202,6 @@
   arazzo: null
 - slug: quickbooks-microsoft-excel
   label: Microsoft Excel
-  partner: microsoft-excel
   partner_name: Microsoft Excel
   category: Microsoft
   type: marketplace
