@@ -1,0 +1,30 @@
+# DERIVED by build-integration-preconfigs.py (roadmap#949). Overlay on the PARTNER's contract:
+# where mailchimp's enum names quickbooks, and what that value is.
+overlay: 1.0.0
+info:
+  title: quickbooks as a processor-connection in mailchimp's contract
+  version: 1.0.0
+extends: https://raw.githubusercontent.com/api-evangelist/mailchimp/refs/heads/main/openapi/mailchimp-lists-api-openapi.yml
+actions:
+- target: $.paths['/lists/{list_id}/members/{subscriber_hash}/activity-feed'].get.responses['200'].content['application/json'].schema.properties.activity.items['x-oneOf'][19].properties.integration_platform
+  update:
+    x-apievangelist-integration:
+      values:
+        quickbooks:
+          provider: quickbooks
+          relationship: processor-connection
+          evidence: https://github.com/api-evangelist/mailchimp/blob/main/openapi/mailchimp-lists-api-openapi.yml
+      method: derived
+      generated: '2026-10-12'
+      generator: build-integration-preconfigs.py
+- target: $.paths['/lists/{list_id}/members/{subscriber_hash}/activity-feed'].get.responses['200'].content['application/problem+json'].schema.properties.activity.items['x-oneOf'][19].properties.integration_platform
+  update:
+    x-apievangelist-integration:
+      values:
+        quickbooks:
+          provider: quickbooks
+          relationship: processor-connection
+          evidence: https://github.com/api-evangelist/mailchimp/blob/main/openapi/mailchimp-lists-api-openapi.yml
+      method: derived
+      generated: '2026-10-12'
+      generator: build-integration-preconfigs.py

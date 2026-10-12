@@ -1,0 +1,726 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/quickbooks/integrations
+- https://composio.dev/toolkits/quickbooks
+checked:
+- https://composio.dev/toolkits/quickbooks
+- https://monid.ai/tools/quickbooks
+- https://n8n.io/integrations/quickbooks/
+- https://zapier.com/apps/quickbooks/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: quickbooks
+  url: https://zapier.com/apps/quickbooks/integrations
+  external_url: http://intuit.com/
+  partner_tier: BRONZE
+  triggers:
+  - key: account_v2
+    label: New Account
+  - key: bank_transaction
+    label: New Bank Transaction
+  - key: bill_v2
+    label: New Bill
+  - key: customer_v2
+    label: New Customer
+  - key: estimate_emailed
+    label: Estimate Emailed
+  - key: estimate_v2
+    label: New Estimate
+  - key: expense_v2
+    label: New Expense
+  - key: invoice_due
+    label: New Invoice Due
+  - key: invoice_emailed
+    label: Invoice Emailed
+  - key: invoice_v2
+    label: New Invoice
+  - key: new_bill_payment
+    label: New Bill Payment
+  - key: new_credit_memo_v2
+    label: New Credit Memo
+  - key: new_deposit_v2
+    label: New Deposit
+  - key: new_journal_entry
+    label: New Journal Entry
+  - key: new_paid_invoice
+    label: New Paid Invoice
+  - key: new_product
+    label: New Product
+  - key: new_project_v3
+    label: New Project
+  - key: new_refund_receipt
+    label: New Refund Receipt
+  - key: new_time_entry
+    label: New Time Entry
+  - key: payment_v2
+    label: New Payment
+  - key: purchase_order_v2
+    label: New Purchase Order
+  - key: sales_receipt_v2
+    label: New Sales Receipt
+  - key: supplier_credit
+    label: New Supplier Credit
+  - key: updated_bill
+    label: Updated Bill
+  - key: updated_credit_memo_v2
+    label: Updated Credit Memo
+  - key: updated_customer_v2
+    label: Updated Customer
+  - key: updated_estimate_v2
+    label: Updated Estimate
+  - key: updated_invoice_v2
+    label: Updated Invoice
+  - key: vendor_v2
+    label: New Vendor
+  actions:
+  - key: attach
+    label: Attach File(s) or Note
+  - key: bill
+    label: Create Bill (Item Based)
+  - key: bill_account
+    label: Create Bill (Account Based)
+  - key: bill_v2
+    label: Create Bill (Item Based)
+  - key: create_deposit
+    label: Create Deposit
+  - key: create_employee_v0
+    label: Create Employee
+  - key: credit_memo
+    label: Create Credit Memo
+  - key: customer
+    label: Create Customer
+  - key: estimate
+    label: Create Estimate
+  - key: expense
+    label: Create Expense
+  - key: item
+    label: Create Product/Service
+  - key: journal_entry
+    label: Create Journal Entry
+  - key: new_invoice_v4
+    label: Create Invoice
+  - key: new_sales_receipt
+    label: Create Sales Receipt
+  - key: payment
+    label: Create Payment
+  - key: purchase_order
+    label: Create Purchase Order
+  - key: refund_receipt
+    label: Create Refund Receipt
+  - key: send_estimate
+    label: Send Estimate
+  - key: send_invoice
+    label: Send Invoice
+  - key: send_sales_receipt
+    label: Send Sales Receipt
+  - key: time_activity
+    label: Create Time Activity
+  - key: update_bill
+    label: Update Bill
+  - key: update_customer
+    label: Update Customer
+  - key: update_estimate
+    label: Update Estimate
+  - key: update_invoice
+    label: Update Invoice
+  - key: update_item
+    label: Update Product
+  - key: update_purchase
+    label: Update Purchase (Expense)
+  - key: update_sales_receipt
+    label: Update Sales Receipt
+  - key: update_vendor
+    label: Update Vendor
+  - key: vendor
+    label: Create Vendor
+  - key: vendor_credit
+    label: Create Vendor Credit
+  - key: void_invoice
+    label: Void Invoice
+  - key: _zap_raw_request
+    label: API Request (Beta)
+  searches:
+  - key: account
+    label: Find Account
+  - key: attachments
+    label: Get Attachments
+  - key: customer_v2
+    label: Find Customer
+  - key: estimate
+    label: Find Estimate
+  - key: find_bill_payment
+    label: Find Bill Payment
+  - key: find_class_v0
+    label: Find Class
+  - key: find_customer_by_query
+    label: Find Customer by Query
+  - key: find_employee_v0
+    label: Find Employee
+  - key: find_payment_v0
+    label: Find Payment
+  - key: find_products
+    label: Find Products
+  - key: find_purchase_expense
+    label: Find Purchase (Expense)
+  - key: find_purchase_order
+    label: Find Purchase Order
+  - key: find_sales_receipt_v2
+    label: Find Sales Receipt
+  - key: invoice
+    label: Find Invoice
+  - key: product
+    label: Find Product
+  - key: vendor
+    label: Find Vendor
+- marketplace: composio
+  channel: agent-gateway
+  app: quickbooks
+  url: https://composio.dev/toolkits/quickbooks
+  identity: action-prefix
+  actions:
+  - key: QUICKBOOKS_CAPTURE_CHARGE
+  - key: QUICKBOOKS_CREATE_ACCOUNT
+  - key: QUICKBOOKS_CREATE_BANK_ACCOUNT
+  - key: QUICKBOOKS_CREATE_BILL
+  - key: QUICKBOOKS_CREATE_BILL_PAYMENT
+  - key: QUICKBOOKS_CREATE_CLASS
+  - key: QUICKBOOKS_CREATE_CREDIT_MEMO
+  - key: QUICKBOOKS_CREATE_CUSTOMER
+  - key: QUICKBOOKS_CREATE_DEPOSIT
+  - key: QUICKBOOKS_CREATE_ECHECK_PAYMENT
+  - key: QUICKBOOKS_CREATE_EMPLOYEE
+  - key: QUICKBOOKS_CREATE_ESTIMATE
+  - key: QUICKBOOKS_CREATE_INVOICE
+  - key: QUICKBOOKS_CREATE_ITEM
+  - key: QUICKBOOKS_CREATE_JOURNAL_ENTRY
+  - key: QUICKBOOKS_CREATE_PAYMENT
+  - key: QUICKBOOKS_CREATE_PURCHASE
+  - key: QUICKBOOKS_CREATE_PURCHASE_ORDER
+  - key: QUICKBOOKS_CREATE_REFUND_RECEIPT
+  - key: QUICKBOOKS_CREATE_SALES_RECEIPT
+  - key: QUICKBOOKS_CREATE_TAXSERVICE_TAXCODE
+  - key: QUICKBOOKS_CREATE_TAX_AGENCY
+  - key: QUICKBOOKS_CREATE_TIME_ACTIVITY
+  - key: QUICKBOOKS_CREATE_VENDOR
+  - key: QUICKBOOKS_CREATE_VENDOR_CREDIT
+  - key: QUICKBOOKS_CUSTOMER_BALANCE_DETAIL
+  - key: QUICKBOOKS_CUSTOMER_BALANCE_REPORT
+  - key: QUICKBOOKS_DELETE_BANK_ACCOUNT
+  - key: QUICKBOOKS_EXECUTE_BATCH_OPERATION
+  - key: QUICKBOOKS_GET_AGED_RECEIVABLES_REPORT
+  - key: QUICKBOOKS_GET_ATTACHABLE
+  - key: QUICKBOOKS_GET_BALANCE_SHEET_REPORT
+  - key: QUICKBOOKS_GET_BANK_ACCOUNT
+  - key: QUICKBOOKS_GET_BILL
+  - key: QUICKBOOKS_GET_BILL_PAYMENT
+  - key: QUICKBOOKS_GET_CHANGED_ENTITIES
+  - key: QUICKBOOKS_GET_COMPANY_INFO
+  - key: QUICKBOOKS_GET_CREDIT_MEMO
+  - key: QUICKBOOKS_GET_CREDIT_MEMO_PDF
+  - key: QUICKBOOKS_GET_DEPARTMENT
+  - key: QUICKBOOKS_GET_DEPOSIT
+  - key: QUICKBOOKS_GET_ESTIMATE
+  - key: QUICKBOOKS_GET_ESTIMATE_PDF
+  - key: QUICKBOOKS_GET_EXCHANGE_RATE
+  - key: QUICKBOOKS_GET_GENERAL_LEDGER_REPORT
+  - key: QUICKBOOKS_GET_INVENTORY_VALUATION_SUMMARY
+  - key: QUICKBOOKS_GET_INVOICE_PDF
+  - key: QUICKBOOKS_GET_ITEM
+  - key: QUICKBOOKS_GET_JOURNAL_ENTRY
+  - key: QUICKBOOKS_GET_PAYMENT
+  - key: QUICKBOOKS_GET_PAYMENT_METHOD
+  - key: QUICKBOOKS_GET_PAYMENT_PDF
+  - key: QUICKBOOKS_GET_PREFERENCES
+  - key: QUICKBOOKS_GET_PROFIT_AND_LOSS_DETAIL_REPORT
+  - key: QUICKBOOKS_GET_PROFIT_AND_LOSS_REPORT
+  - key: QUICKBOOKS_GET_PURCHASE
+  - key: QUICKBOOKS_GET_PURCHASE_ORDER
+  - key: QUICKBOOKS_GET_PURCHASE_ORDER_PDF
+  - key: QUICKBOOKS_GET_REFUND_RECEIPT
+  - key: QUICKBOOKS_GET_REFUND_RECEIPT_PDF
+  - key: QUICKBOOKS_GET_REPORTS
+  - key: QUICKBOOKS_GET_REPORT_ACCOUNT_LIST
+  - key: QUICKBOOKS_GET_REPORT_AGED_PAYABLES
+  - key: QUICKBOOKS_GET_REPORT_AGED_PAYABLE_DETAIL
+  - key: QUICKBOOKS_GET_REPORT_AGED_RECEIVABLE_DETAIL
+  - key: QUICKBOOKS_GET_REPORT_CASH_FLOW
+  - key: QUICKBOOKS_GET_REPORT_CLASS_SALES
+  - key: QUICKBOOKS_GET_REPORT_CUSTOMER_INCOME
+  - key: QUICKBOOKS_GET_REPORT_CUSTOMER_SALES
+  - key: QUICKBOOKS_GET_REPORT_DEPARTMENT_SALES
+  - key: QUICKBOOKS_GET_REPORT_ITEM_SALES
+  - key: QUICKBOOKS_GET_REPORT_TRIAL_BALANCE
+  - key: QUICKBOOKS_GET_SALESRECEIPT_PDF
+  - key: QUICKBOOKS_GET_SALES_RECEIPT
+  - key: QUICKBOOKS_GET_TAX_RATE
+  - key: QUICKBOOKS_GET_TERM
+  - key: QUICKBOOKS_GET_TIME_ACTIVITY
+  - key: QUICKBOOKS_GET_TRANSACTION_LIST_REPORT
+  - key: QUICKBOOKS_GET_TRANSFER
+  - key: QUICKBOOKS_GET_VENDOR_CREDIT
+  - key: QUICKBOOKS_GET_VENDOR_EXPENSES_REPORT
+  - key: QUICKBOOKS_LIST_CARDS
+  - key: QUICKBOOKS_LIST_DEPARTMENTS
+  - key: QUICKBOOKS_LIST_INVOICES
+  - key: QUICKBOOKS_QUERY_ACCOUNT
+  - key: QUICKBOOKS_QUERY_ATTACHABLE
+  - key: QUICKBOOKS_QUERY_ENTITIES
+  - key: QUICKBOOKS_READ_ACCOUNT
+  - key: QUICKBOOKS_READ_CLASS
+  - key: QUICKBOOKS_READ_CUSTOMER
+  - key: QUICKBOOKS_READ_EMPLOYEE
+  - key: QUICKBOOKS_READ_INVOICE
+  - key: QUICKBOOKS_READ_VENDOR
+  - key: QUICKBOOKS_SEND_CREDIT_MEMO
+  - key: QUICKBOOKS_UPDATE_ATTACHABLE
+  - key: QUICKBOOKS_UPDATE_COMPANY_INFO
+  - key: QUICKBOOKS_UPDATE_DEPARTMENT
+  - key: QUICKBOOKS_UPDATE_FULL_INVOICE
+  - key: QUICKBOOKS_UPDATE_PAYMENT_METHOD
+  - key: QUICKBOOKS_UPDATE_PREFERENCES
+  - key: QUICKBOOKS_UPDATE_SPARSE_INVOICE
+  - key: QUICKBOOKS_UPDATE_TERM
+  - key: QUICKBOOKS_UPDATE_TRANSFER
+  - key: QUICKBOOKS_VENDOR_BALANCE_DETAIL
+  - key: QUICKBOOKS_VENDOR_BALANCE_REPORT
+edges:
+- partner_name: HubSpot
+  partner: hubspot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/hubspot
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://www.hubspot.com/
+- partner_name: monday.com
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/monday
+  direction: third-party
+  category: Project Management
+  partner_url: https://monday.com/
+- partner_name: Airtable
+  partner: airtable
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/airtable
+  direction: third-party
+  category: Databases
+  partner_url: https://airtable.com/
+- partner_name: ShipStation
+  partner: shipstation
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/shipstation
+  direction: third-party
+  category: eCommerce
+  partner_url: http://www.shipstation.com/
+- partner_name: Pipedrive
+  partner: pipedrive
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/pipedrive
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://pipedrive.com/
+- partner_name: Shopify
+  partner: shopify
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/shopify
+  direction: third-party
+  category: eCommerce
+  partner_url: https://www.shopify.com/
+- partner_name: ClickUp
+  partner: clickup
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/clickup
+  direction: third-party
+  category: Project Management
+  partner_url: https://clickup.com/zapier
+- partner_name: PandaDoc
+  partner: pandadoc
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/pandadoc
+  direction: third-party
+  category: Documents
+  partner_url: https://www.pandadoc.com/integrations/zapier/?utm_source=zapier-marketplace&utm_medium=partner&utm_campaign=2020-11-inbd-marketplace-websitevisit-pandadoc-zapier-integration
+- partner_name: Google Forms
+  partner: google-forms
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/google-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://google.com/
+- partner_name: Mailchimp
+  partner: mailchimp
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/mailchimp
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://mailchimp.com/
+- partner_name: Ecwid by Lightspeed
+  partner: ecwid
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/ecwid
+  direction: third-party
+  category: eCommerce
+  partner_url: https://www.ecwid.com/
+- partner_name: Gmail
+  partner: gmail
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/gmail
+  direction: third-party
+  category: Email
+  partner_url: https://mail.google.com/
+- partner_name: ActiveCampaign
+  partner: activecampaign
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/activecampaign
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.activecampaign.com/?utm_source=unpaid_syndication_website&utm_medium=referral&utm_campaign=zapier_listing
+- partner_name: Jotform
+  partner: jotform
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/jotform
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: http://www.jotform.com/
+- partner_name: Microsoft Excel
+  partner: null
+  partner_match: null
+  partner_candidate: zapier
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/excel
+  direction: third-party
+  category: Microsoft
+  partner_url: https://zapier.com/office.com
+- partner_name: Notion
+  partner: notion
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/notion
+  direction: third-party
+  category: Task Management
+  partner_url: https://www.notion.so/
+- partner_name: Square
+  partner: square
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/square
+  direction: third-party
+  category: eCommerce
+  partner_url: https://squareup.com/t/cmtp_performance/pr_developers/d_partnerships/p_zapier/?route=
+- partner_name: Google Drive
+  partner: google-drive
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/google-drive
+  direction: third-party
+  category: File Management & Storage
+  partner_url: https://www.google.com/drive/
+- partner_name: Microsoft Outlook
+  partner: microsoft-outlook
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/microsoft-outlook
+  direction: third-party
+  category: Calendar
+  partner_url: https://outlook.live.com/
+- partner_name: Acuity Scheduling
+  partner: acuity-scheduling
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/acuity-scheduling
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://acuityscheduling.com/?utm_source=zapier.com&utm_medium=referral&utm_campaign=integration-page
+- partner_name: Google Calendar
+  partner: google-calendar
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/google-calendar
+  direction: third-party
+  category: Calendar
+  partner_url: https://calendar.google.com/
+- partner_name: Gravity Forms
+  partner: gravity-forms
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/gravity-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.gravityforms.com/?utm_campaign=partners&utm_source=zapier-listing-learn-more&utm_medium=free-placement
+- partner_name: Lodgify
+  partner: lodgify
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/lodgify
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://www.lodgify.com/
+- partner_name: Docusign
+  partner: docusign
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/docusign
+  direction: third-party
+  category: AI Document Extraction
+  partner_url: https://go.docusign.com/trial/us-goog-trynow-display-zapier/
+- partner_name: Thryv
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/thryv
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://www.thryv.com/
+- partner_name: LeadConnector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/leadconnector
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.leadconnectorhq.com/
+- partner_name: Slack
+  partner: slack
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/slack
+  direction: third-party
+  category: Team Chat
+  partner_url: https://slack.com/
+- partner_name: Constant Contact
+  partner: constant-contact
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/constant-contact
+  direction: third-party
+  category: Email Newsletters
+  partner_url: http://www.constantcontact.com/signup.jsp?pn=zapier
+- partner_name: Squarespace Forms
+  partner: squarespace
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/squarespace-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.squarespace.com/
+- partner_name: Google Sheets
+  partner: google-sheets
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/google-sheets
+  direction: third-party
+  category: Google
+  partner_url: http://sheets.google.com/
+- partner_name: cacheflow
+  partner: cacheflow
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: processor-connection
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/cacheflow/blob/main/openapi/cacheflow-self-service-api-openapi.yml
+  contract_reference:
+    repo: cacheflow
+    spec_file: cacheflow-self-service-api-openapi.yml
+    value: quickbooks
+    property: schemas.ExternalSource.sourceType
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+- partner_name: mailchimp
+  partner: mailchimp
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: processor-connection
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/mailchimp/blob/main/openapi/mailchimp-lists-api-openapi.yml
+  contract_reference:
+    repo: mailchimp
+    spec_file: mailchimp-lists-api-openapi.yml
+    value: quickbooks
+    property: x-oneOf.integration_platform
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+- partner_name: ordoro
+  partner: ordoro
+  partner_match: domain
+  type: contract
+  channel: partner-built
+  relationship: processor-connection
+  direction: partner-built
+  evidence: https://github.com/api-evangelist/ordoro/blob/main/openapi/ordoro-integration-api-openapi.yml
+  contract_reference:
+    repo: ordoro
+    spec_file: ordoro-integration-api-openapi.yml
+    value: quickbooks
+    property: schemas.integration_quickbooks.vendor
+    detected_by: detect-payment-method-edges.py
+    detected: '2026-10-12'
+templates:
+- title: Create QuickBooks Online customers with sales receipts for new Stripe payments
+  url: https://zapier.com/apps/quickbooks/integrations/stripe/9826/create-quickbooks-online-customers-with-sales-receipts-for-new-stripe-payments
+  apps:
+  - stripe
+  - quickbooks
+- title: Add new ZenMaid contacts as QuickBooks Online customers
+  url: https://zapier.com/apps/quickbooks/integrations/zenmaid-nWD/1155846/add-new-zenmaid-contacts-as-quickbooks-online-customers
+  apps:
+  - zenmaid-nWD
+  - quickbooks
+- title: Create ShipStation order from QuickBooks invoices
+  url: https://zapier.com/apps/quickbooks/integrations/shipstation/9626/create-shipstation-order-from-quickbooks-invoices
+  apps:
+  - quickbooks
+  - shipstation
+- title: Add new QuickBooks Online invoices to Google Sheets spreadsheet rows
+  url: https://zapier.com/apps/google-sheets/integrations/quickbooks/1974/add-new-quickbooks-online-invoices-to-google-sheets-spreadsheet-rows
+  apps:
+  - quickbooks
+  - google-sheets
+- title: Generate receipts in QuickBooks Online for new Stripe payments
+  url: https://zapier.com/apps/quickbooks/integrations/stripe/1936/generate-receipts-in-quickbooks-online-for-new-stripe-payments
+  apps:
+  - stripe
+  - quickbooks
+- title: Send channel messages in Slack for new payments in Quickbooks Online
+  url: https://zapier.com/apps/quickbooks/integrations/slack/146473/send-channel-messages-in-slack-for-new-payments-in-quickbooks-online
+  apps:
+  - quickbooks
+  - slack
+- title: Record every new or updated Donorbox donation in QuickBooks
+  url: https://zapier.com/apps/donorbox/integrations/quickbooks/23391/record-every-new-or-updated-donorbox-donation-in-quickbooks
+  apps:
+  - donorbox
+  - quickbooks
+- title: Update QuickBooks Online customers when ZenMaid contacts are modified
+  url: https://zapier.com/apps/quickbooks/integrations/zenmaid-nWD/1719201/update-quickbooks-online-customers-when-zenmaid-contacts-are-modified
+  apps:
+  - zenmaid-nWD
+  - quickbooks
+- title: Add new Clulo sales receipts to QuickBooks Online
+  url: https://zapier.com/apps/clulo/integrations/quickbooks/1109687/add-new-clulo-sales-receipts-to-quickbooks-online
+  apps:
+  - clulo
+  - quickbooks
+- title: Create sales receipts in QuickBooks Online for new Givebutter transactions
+  url: https://zapier.com/apps/givebutter/integrations/quickbooks/1407181/create-sales-receipts-in-quickbooks-online-for-new-givebutter-transactions
+  apps:
+  - givebutter
+  - quickbooks
+- title: Create QuickBooks Online invoices from new Stripe payments
+  url: https://zapier.com/apps/quickbooks/integrations/stripe/10319/create-quickbooks-online-invoices-from-new-stripe-payments
+  apps:
+  - stripe
+  - quickbooks
+- title: Add new or updated Donorbox donors as QuickBooks customers
+  url: https://zapier.com/apps/donorbox/integrations/quickbooks/23390/add-new-or-updated-donorbox-donors-as-quickbooks-customers
+  apps:
+  - donorbox
+  - quickbooks
+template_total: 2722
