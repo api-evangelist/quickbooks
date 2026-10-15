@@ -454,7 +454,7 @@
     app_slug: quickbooks
     beta: false
     builder: unknown (not in the directory record)
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: quickbooks-n8n
   label: n8n
@@ -479,7 +479,7 @@
     node_path: QuickBooks
     trigger: false
     builder: n8n (built-in node)
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: quickbooks-pipedream
   label: Pipedream
@@ -505,5 +505,5 @@
     actions: true
     sources: true
     builder: Pipedream repo (component)
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
