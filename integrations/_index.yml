@@ -541,7 +541,7 @@
       type: source
       lapsed: false
       cloud: true
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: quickbooks-fivetran
   label: Fivetran
@@ -567,7 +567,7 @@
     - connectors/applications/quickbooks
     vendor_link: https://quickbooks.intuit.com
     builder: Fivetran
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: quickbooks-meltano
   label: Meltano
@@ -596,5 +596,5 @@
     quality:
     - silver
     builder: 'community (Meltano Hub variant maintainers: hotgluexyz)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
