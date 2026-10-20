@@ -15,6 +15,7 @@
   evidence: https://zapier.com/apps/quickbooks/integrations/shipstation/9626/create-shipstation-order-from-quickbooks-invoices
   template: https://zapier.com/apps/quickbooks/integrations/shipstation/9626/create-shipstation-order-from-quickbooks-invoices
   source: template
+  relationship: ipaas-bridge
   status: pending-partner-spec
   arazzo: null
 - slug: quickbooks-add-new-quickbooks-online-invoices-to-google-sheets-spreadsheet-rows
@@ -29,6 +30,7 @@
   evidence: https://zapier.com/apps/google-sheets/integrations/quickbooks/1974/add-new-quickbooks-online-invoices-to-google-sheets-spreadsheet-rows
   template: https://zapier.com/apps/google-sheets/integrations/quickbooks/1974/add-new-quickbooks-online-invoices-to-google-sheets-spreadsheet-rows
   source: template
+  relationship: ipaas-bridge
   status: pending-partner-spec
   arazzo: null
 - slug: quickbooks-send-channel-messages-in-slack-for-new-payments-in-quickbooks-online
@@ -43,326 +45,7 @@
   evidence: https://zapier.com/apps/quickbooks/integrations/slack/146473/send-channel-messages-in-slack-for-new-payments-in-quickbooks-online
   template: https://zapier.com/apps/quickbooks/integrations/slack/146473/send-channel-messages-in-slack-for-new-payments-in-quickbooks-online
   source: template
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-hubspot
-  label: HubSpot
-  partner: hubspot
-  partner_name: HubSpot
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/hubspot
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-monday-com
-  label: monday.com
-  partner_name: monday.com
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/monday
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-airtable
-  label: Airtable
-  partner: airtable
-  partner_name: Airtable
-  category: Databases
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/airtable
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-pipedrive
-  label: Pipedrive
-  partner: pipedrive
-  partner_name: Pipedrive
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/pipedrive
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-shopify
-  label: Shopify
-  partner: shopify
-  partner_name: Shopify
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/shopify
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-clickup
-  label: ClickUp
-  partner: clickup
-  partner_name: ClickUp
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/clickup
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-pandadoc
-  label: PandaDoc
-  partner: pandadoc
-  partner_name: PandaDoc
-  category: Documents
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/pandadoc
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-google-forms
-  label: Google Forms
-  partner: google-forms
-  partner_name: Google Forms
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/google-forms
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-mailchimp
-  label: Mailchimp
-  partner: mailchimp
-  partner_name: Mailchimp
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/mailchimp
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-ecwid-by-lightspeed
-  label: Ecwid by Lightspeed
-  partner: ecwid
-  partner_name: Ecwid by Lightspeed
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/ecwid
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-gmail
-  label: Gmail
-  partner: gmail
-  partner_name: Gmail
-  category: Email
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/gmail
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-activecampaign
-  label: ActiveCampaign
-  partner: activecampaign
-  partner_name: ActiveCampaign
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/activecampaign
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-jotform
-  label: Jotform
-  partner: jotform
-  partner_name: Jotform
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/jotform
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-microsoft-excel
-  label: Microsoft Excel
-  partner_name: Microsoft Excel
-  category: Microsoft
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/excel
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-notion
-  label: Notion
-  partner: notion
-  partner_name: Notion
-  category: Task Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/notion
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-square
-  label: Square
-  partner: square
-  partner_name: Square
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/square
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-google-drive
-  label: Google Drive
-  partner: google-drive
-  partner_name: Google Drive
-  category: File Management & Storage
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/google-drive
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-microsoft-outlook
-  label: Microsoft Outlook
-  partner: microsoft-outlook
-  partner_name: Microsoft Outlook
-  category: Calendar
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/microsoft-outlook
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-acuity-scheduling
-  label: Acuity Scheduling
-  partner: acuity-scheduling
-  partner_name: Acuity Scheduling
-  category: Scheduling & Booking
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/acuity-scheduling
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-google-calendar
-  label: Google Calendar
-  partner: google-calendar
-  partner_name: Google Calendar
-  category: Calendar
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/google-calendar
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-gravity-forms
-  label: Gravity Forms
-  partner: gravity-forms
-  partner_name: Gravity Forms
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/gravity-forms
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-lodgify
-  label: Lodgify
-  partner: lodgify
-  partner_name: Lodgify
-  category: Scheduling & Booking
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/lodgify
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-docusign
-  label: Docusign
-  partner: docusign
-  partner_name: Docusign
-  category: AI Document Extraction
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/docusign
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-thryv
-  label: Thryv
-  partner_name: Thryv
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/thryv
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-leadconnector
-  label: LeadConnector
-  partner_name: LeadConnector
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/leadconnector
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-constant-contact
-  label: Constant Contact
-  partner: constant-contact
-  partner_name: Constant Contact
-  category: Email Newsletters
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/constant-contact
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: quickbooks-squarespace-forms
-  label: Squarespace Forms
-  partner: squarespace
-  partner_name: Squarespace Forms
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/quickbooks/integrations/squarespace-forms
-  source: edge
+  relationship: ipaas-bridge
   status: pending-partner-spec
   arazzo: null
 - slug: quickbooks-cacheflow
@@ -597,4 +280,352 @@
     sources: true
     builder: Pipedream repo (component)
   status: not-a-workflow
+  arazzo: null
+- slug: quickbooks-hubspot
+  label: HubSpot
+  partner: hubspot
+  partner_name: HubSpot
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/hubspot
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-monday-com
+  label: monday.com
+  partner: monday-com
+  partner_name: monday.com
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/monday
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-airtable
+  label: Airtable
+  partner: airtable
+  partner_name: Airtable
+  category: Databases
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/airtable
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-pipedrive
+  label: Pipedrive
+  partner: pipedrive
+  partner_name: Pipedrive
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/pipedrive
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-shopify
+  label: Shopify
+  partner: shopify
+  partner_name: Shopify
+  category: eCommerce
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/shopify
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-clickup
+  label: ClickUp
+  partner: clickup
+  partner_name: ClickUp
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/clickup
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-pandadoc
+  label: PandaDoc
+  partner: pandadoc
+  partner_name: PandaDoc
+  category: Documents
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/pandadoc
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-google-forms
+  label: Google Forms
+  partner: google-forms
+  partner_name: Google Forms
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/google-forms
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-mailchimp
+  label: Mailchimp
+  partner: mailchimp
+  partner_name: Mailchimp
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/mailchimp
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-ecwid-by-lightspeed
+  label: Ecwid by Lightspeed
+  partner: ecwid
+  partner_name: Ecwid by Lightspeed
+  category: eCommerce
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/ecwid
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-gmail
+  label: Gmail
+  partner: gmail
+  partner_name: Gmail
+  category: Email
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/gmail
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-activecampaign
+  label: ActiveCampaign
+  partner: activecampaign
+  partner_name: ActiveCampaign
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/activecampaign
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-jotform
+  label: Jotform
+  partner: jotform
+  partner_name: Jotform
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/jotform
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-microsoft-excel
+  label: Microsoft Excel
+  partner_name: Microsoft Excel
+  category: Microsoft
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/excel
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-notion
+  label: Notion
+  partner: notion
+  partner_name: Notion
+  category: Task Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/notion
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-square
+  label: Square
+  partner: square
+  partner_name: Square
+  category: eCommerce
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/square
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-google-drive
+  label: Google Drive
+  partner: google-drive
+  partner_name: Google Drive
+  category: File Management & Storage
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/google-drive
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-microsoft-outlook
+  label: Microsoft Outlook
+  partner: microsoft-outlook
+  partner_name: Microsoft Outlook
+  category: Calendar
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/microsoft-outlook
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-acuity-scheduling
+  label: Acuity Scheduling
+  partner: acuity-scheduling
+  partner_name: Acuity Scheduling
+  category: Scheduling & Booking
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/acuity-scheduling
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-squarespace-forms
+  label: Squarespace Forms
+  partner: squarespace
+  partner_name: Squarespace Forms
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/squarespace-forms
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-google-calendar
+  label: Google Calendar
+  partner: google-calendar
+  partner_name: Google Calendar
+  category: Calendar
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/google-calendar
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-gravity-forms
+  label: Gravity Forms
+  partner: gravity-forms
+  partner_name: Gravity Forms
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/gravity-forms
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-lodgify
+  label: Lodgify
+  partner: lodgify
+  partner_name: Lodgify
+  category: Scheduling & Booking
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/lodgify
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-thryv
+  label: Thryv
+  partner_name: Thryv
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/thryv
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-docusign
+  label: Docusign
+  partner: docusign
+  partner_name: Docusign
+  category: AI Document Extraction
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/docusign
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-leadconnector
+  label: LeadConnector
+  partner_name: LeadConnector
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/leadconnector
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: quickbooks-constant-contact
+  label: Constant Contact
+  partner: constant-contact
+  partner_name: Constant Contact
+  category: Email Newsletters
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/quickbooks/integrations/constant-contact
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
   arazzo: null
