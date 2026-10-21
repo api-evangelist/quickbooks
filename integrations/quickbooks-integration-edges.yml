@@ -21,6 +21,9 @@ checked:
 - https://quickbooks.intuit.com/app/apps/
 - https://zapier.com/api/v4/apps/
 - https://zapier.com/apps/quickbooks/integrations
+- https://advertising.amazon.com/partners/directory
+- https://sellercentral.amazon.com/gspn
+- https://sellercentral.amazon.com/selling-partner-appstore
 summary: null
 marketplace_apps:
 - marketplace: own
@@ -930,6 +933,25 @@ edges:
   direction: third-party
   category: Google
   partner_url: http://sheets.google.com/
+- partner_name: Amazon Selling Partner Appstore
+  partner: amazon-seller-central
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://sellercentral.amazon.com/selling-partner-appstore/dp/amzn1.sp.solution.13e9523d-70e7-41f6-b80b-99e153824a69
+  mirror_of: amazon-seller-central/integrations/amazon-seller-central-integration-edges.yml
+  apps:
+  - QuickBooks Online
+  detected: '2026-10-21'
+  detected_by: sweep-amazon-sp-api-appstore.py
+  badges:
+  - emerald
+  publisher_verified:
+  - emerald
 templates:
 - title: Create QuickBooks Online customers with sales receipts for new Stripe payments
   url: https://zapier.com/apps/quickbooks/integrations/stripe/9826/create-quickbooks-online-customers-with-sales-receipts-for-new-stripe-payments
