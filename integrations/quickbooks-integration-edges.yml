@@ -24,6 +24,9 @@ checked:
 - https://advertising.amazon.com/partners/directory
 - https://sellercentral.amazon.com/gspn
 - https://sellercentral.amazon.com/selling-partner-appstore
+- https://ifttt.com/explore/services
+- https://ifttt.com/quickbooks_online
+- https://ifttt.com/sitemap_services.xml
 summary: null
 marketplace_apps:
 - marketplace: own
@@ -952,6 +955,31 @@ edges:
   - emerald
   publisher_verified:
   - emerald
+- partner_name: IFTTT
+  partner: ifttt
+  partner_match: aggregator
+  type: marketplace
+  marketplace: ifttt-services
+  channel: ipaas-listing
+  relationship: ipaas-bridge
+  direction: third-party
+  evidence: https://ifttt.com/quickbooks_online
+  category: null
+  contract_reference:
+    register: IFTTT service directory (ifttt.com/explore/services; ifttt.com/<service>)
+    spec_file: null
+    role: ipaas-connector:ifttt
+    registered_name: QuickBooks Online
+    matched_domain: intuit.com
+    matched_by: domain+name-among-holders
+    app_slug: quickbooks_online
+    ifttt_category: Business tools
+    builder: unknown (the service page does not say who built it)
+    detected_by: sweep-ifttt-services.py
+    detected: '2026-10-23'
+    signal_note: one edge per (provider, platform); triggers, actions and applet counts are context, never read
+  detected_by: sweep-ifttt-services.py
+  first_seen: '2026-10-23'
 templates:
 - title: Create QuickBooks Online customers with sales receipts for new Stripe payments
   url: https://zapier.com/apps/quickbooks/integrations/stripe/9826/create-quickbooks-online-customers-with-sales-receipts-for-new-stripe-payments
