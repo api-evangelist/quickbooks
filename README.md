@@ -1,4 +1,4 @@
-# Quickbooks (quickbooks)\n\nAPI and integration profile for Quickbooks.
+# QuickBooks
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -63,3 +63,115 @@
 >
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
+
+QuickBooks is Intuit's accounting software platform for small businesses, self-employed, and accountants, available as QuickBooks Online (cloud) and QuickBooks Desktop. The QuickBooks Online Accounting REST API provides programmatic access to a company's financial data, allowing developers to read, create, update, and delete accounting objects including invoices, customers, payments, bills, vendors, items, and tax data using OAuth 2.0 and JSON over HTTPS.
+
+**Areas:** Accounting · Bookkeeping · Small Business · Finance · Invoicing · Payroll · Tax
+
+## QuickBooks on APIs.io
+
+Everything profiled for QuickBooks is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/quickbooks/](https://apis.io/providers/quickbooks/)** — or go straight to one of the APIs or properties below.
+
+### APIs (4)
+
+- [QuickBooks Online Accounting API](https://apis.io/apis/quickbooks/online-accounting/) — REST API for the QuickBooks Online accounting platform, exposing accounting objects such as Invoice, Customer, Payment, Bill, Vendor, Account, Item,…
+- [QuickBooks Payments API](https://apis.io/apis/quickbooks/payments/) — REST API for processing credit card, ACH, and eCheck payments through Intuit's payments platform, with support for charges, refunds, tokens, and payment…
+- [QuickBooks Payroll API](https://apis.io/apis/quickbooks/payroll/) — REST API for managing payroll, employees, paychecks, and payroll tax information within QuickBooks Online Payroll.
+- [QuickBooks](https://apis.io/apis/quickbooks/accounting-api/) — REST API for managing QuickBooks Online accounting entities including Customer, Vendor, Employee, Item, Invoice, Bill, Payment, BillPayment, JournalEntry,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [QuickBooks Online Webhooks](https://apis.io/asyncapis/quickbooks/quickbooks-online-webhooks-asyncapi/)
+
+#### Event channels (1)
+
+Individual events and webhooks the provider emits.
+
+- [/quickbooks/webhook](https://apis.io/channels/quickbooks/quickbooks-webhook/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [MCP Server](https://apis.io/servers/quickbooks/mcp-server/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [QuickBooks — asyncapi rules](https://apis.io/rules/quickbooks/quickbooks-asyncapi-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Quickbooks Domain Security](https://apis.io/security/quickbooks/quickbooks-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://quickbooks.intuit.com/)
+- [Documentation](https://developer.intuit.com/app/developer/qbo/docs/develop)
+- [API reference](https://developer.intuit.com/app/developer/qbo/docs/api/accounting/most-commonly-used/account)
+- [Pricing](https://quickbooks.intuit.com/pricing/)
+- [GitHub](https://github.com/intuit)
+
+## API Evangelist rating
+
+**Kin Score 34.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 70.0 |
+| Contract quality | 40.6 |
+| Contract governance | 13.6 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 23.7 |
+
+**Agent readiness 19.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/quickbooks/](https://apis.io/providers/quickbooks/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for QuickBooks: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/quickbooks/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
